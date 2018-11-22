@@ -1,0 +1,7 @@
+<h1>Add a new dose to your <%= @cocktail.name %></h1>
+
+<%= render 'form', dose: @dose %>
+
+<%= link_to "Back to #{@cocktail.name}", cocktails_path(@cocktail) %>
+
+<%= link_to 'Back to Cocktails List', cocktails_path %>
