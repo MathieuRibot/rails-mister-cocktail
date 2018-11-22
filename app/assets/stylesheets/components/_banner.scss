@@ -1,0 +1,14 @@
+.cocktail-banner {
+  position: relative;
+  width: auto;
+  height: 300px;
+  background-color: white;
+  & h1 {
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 40px;
+    right: 150px;
+  }
+}

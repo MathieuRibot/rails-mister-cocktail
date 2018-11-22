@@ -1,4 +1,12 @@
-<%= simple_form_for [@cocktail] do |c| %>
+<%= simple_form_for [@cocktail], wrapper: :vertical_form,
+  wrapper_mappings: {
+    range: :vertical_range,
+  } do |c| %>
+  <%= c.error_notification %>
   <%= c.input :name %>
-  <%= c.button :submit %>
+
+  <div class="form-group flex-align">
+    <%= c.button :submit, class: "btn-primary btn-center" %>
+  </div>
+
 <% end %>

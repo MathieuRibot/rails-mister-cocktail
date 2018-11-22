@@ -1,17 +1,35 @@
-<h1><%= @cocktail.name %> Recipe</h1>
-
-<div class="list-ingredients">
-  <ul>
-    <% @cocktail.doses.each do |dose| %>
-      <li><%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %><%= dose.ingredient.name %> : <%= dose.description %></li>
-    <% end %>
-  </ul>
+<!-- Banner à faire -->
+<div class="cocktail-banner text-center" style="">
+  <h1><%= @cocktail.name %> Recipe</h1>
 </div>
 
-<div>
-  <%= link_to 'Add an ingredient!', new_cocktail_dose_path(@cocktail) %>
+<div class="wrapper flex">
+  <div class="cocktail-content">
+    <div class="container">
+      <div class="card-cocktail-description">
+        <p>This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card-cocktail-ingredients">
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %><%= dose.ingredient.name %> : <%= dose.description %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div>
-  <%= link_to 'Back to Cocktails List', cocktails_path %>
+
+<div class="footer">
+  <div>
+    <%= link_to 'Add an ingredient!', new_cocktail_dose_path(@cocktail) %>
+  </div>
+
+  <div>
+    <%= link_to 'Back to Cocktails List', cocktails_path %>
+  </div>
 </div>

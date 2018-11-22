@@ -1,0 +1,70 @@
+.card-link {
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.card-body {
+  height: 250px;
+  box-shadow: 2px 2px 3px #B3B3B3;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card-picture {
+  height: 250px;
+  background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(200, 200, 200);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.card-picture:hover .card-hover {
+  opacity: 0.6;
+}
+
+.card-hover-ingredient {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  & ul {
+    list-style-type: none;
+  }
+  & span {
+    color: black;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}
+
+.card-body-name {
+  position: absolute;
+  bottom: 18px;
+  left: 25px;
+  & p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+
+.card-cocktail-description {
+  background-color: rgb(100, 100, 100);
+  margin-right: 25px;
+}
+
+.card-cocktail-ingredients {
+  background-color: rgb(100, 100, 100);
+}
