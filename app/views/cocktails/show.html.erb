@@ -1,24 +1,25 @@
 <!-- Banner à faire -->
-<div class="cocktail-banner text-center" style="">
+<div class="cocktail-banner" style="">
   <h1><%= @cocktail.name %> Recipe</h1>
 </div>
 
-<div class="wrapper flex">
+<div class="wrapper">
   <div class="cocktail-content">
-    <div class="container">
-      <div class="card-cocktail-description">
-        <p>This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text.</p>
-      </div>
+    <div class="card-cocktail-description">
+      <p>This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text.</p>
     </div>
 
-    <div class="container">
-      <div class="card-cocktail-ingredients">
-        <ul>
-          <% @cocktail.doses.each do |dose| %>
-            <li><%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %><%= dose.ingredient.name %> : <%= dose.description %></li>
-          <% end %>
-        </ul>
-      </div>
+    <div class="card-cocktail-ingredients">
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-trash-alt"></i>
+            <% end %>
+            <%= dose.ingredient.name %> : <%= dose.description %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

@@ -5,6 +5,19 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  def search
+    if params[:query].present?
+      @raw_query = params[:query]
+      query = "%#{@raw_query}%"
+      @cocktails = []
+      Cocktail.joins(:ingredients).where('cocktails.name ILIKE ? OR ingredients.name ILIKE ?', query.to_s, query.to_s).each do |cocktail|
+        @cocktails << cocktail unless @cocktails.include?(cocktail)
+      end
+    else
+      @cocktails = Cocktail.all
+    end
+  end
+
   def show
   end
 

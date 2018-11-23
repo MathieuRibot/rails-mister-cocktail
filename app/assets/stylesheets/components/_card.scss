@@ -61,10 +61,16 @@
 
 
 .card-cocktail-description {
+  width: 550px;
   background-color: rgb(100, 100, 100);
-  margin-right: 25px;
+  margin-bottom: 25px;
 }
 
 .card-cocktail-ingredients {
+  width: 550px;
   background-color: rgb(100, 100, 100);
+  margin-bottom: 25px;
+  & ul {
+    list-style-type: none;
+  }
 }

@@ -11,9 +11,27 @@ puts 'Creating ingredients ...............'
 
 ingredients_raw['drinks'].each do |element|
   ingredient_name = element.values[0]
-  # puts ingredient_name
-  # puts ingredient_name.class
+
   Ingredient.create(name: ingredient_name)
+end
+
+puts 'Finished ..............!'
+
+puts 'Creating cocktails ...............'
+
+cocktails = [
+  'Mojito',
+  'Martini',
+  'Bloody Mary',
+  'Margarita',
+  'Daiquiri',
+  'Gin & Tonic',
+  'Moscow Mule',
+  'White Russian'
+]
+
+cocktails.each do |cocktail|
+  Cocktail.create(name: cocktail)
 end
 
 puts 'Finished ..............!'
