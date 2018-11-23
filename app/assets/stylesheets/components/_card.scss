@@ -1,7 +1,6 @@
 .card-link {
   & a {
     text-decoration: none;
-    color: white;
   }
 }
 
@@ -31,7 +30,7 @@
   transition: opacity 0.2s ease;
 }
 .card-picture:hover .card-hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .card-hover-ingredient {
@@ -51,6 +50,8 @@
 
 .card-body-name {
   position: absolute;
+  color: white;
+  text-shadow: 0 0 2px black;
   bottom: 18px;
   left: 25px;
   & p {

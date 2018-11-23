@@ -2,24 +2,30 @@
   background-color: #364e68;
   border-color: #364e68;
   margin-bottom: 0px;
-  height: 62px;
 }
 
 .navbar-link {
-  margin-top: 4px;
+  margin-top: 2px;
   & a {
     color: white;
     font-family: 'Monoton', cursive;
     font-size: 1.7em;
   }
   & a:hover {
+    color: white;
     text-decoration: none;
     opacity: 0.9;
   }
 }
 
+// Overwrite some Bootstrap behaviors //
+
 .navbar-default .navbar-nav > li > a {
   color: white;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  opacity: 0.8;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
