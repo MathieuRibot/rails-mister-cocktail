@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <h1>Edit <%= @cocktail.name %></h1>
+</div>
+
+<div class="container flex-align-justify-center">
+  <div class="form-container">
+    <%= render 'form', cocktail: @cocktail %>
+  </div>
+</div>
+
+<div class="footer">
+  <%= link_to 'Back to Cocktails List', cocktails_path %>
+</div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'cocktails#home'
-  resources :cocktails, only: %i[index show new create] do
+  resources :cocktails, only: %i[index show new create edit update] do
     collection do
       get 'search', to: 'cocktails#search', as: 'search'
     end

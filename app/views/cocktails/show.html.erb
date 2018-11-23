@@ -1,5 +1,5 @@
 <!-- Banner à faire -->
-<div class="cocktail-banner" style="">
+<div class="cocktail-banner" style="background-image: url(<%= @cocktail.pic_url %>);">
   <h1><%= @cocktail.name %> Recipe</h1>
 </div>
 
@@ -7,6 +7,7 @@
   <div class="cocktail-content">
     <div class="card-cocktail-description">
       <p>This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text.</p>
+      <%= link_to 'Edit', edit_cocktail_path(@cocktail) %>
     </div>
 
     <div class="card-cocktail-ingredients">

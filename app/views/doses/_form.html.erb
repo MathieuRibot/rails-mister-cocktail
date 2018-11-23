@@ -7,7 +7,7 @@
   <%= d.input :description %>
   <%= d.association :ingredient, :collection => Ingredient.all.order(:name) %>
 
-  <div class="form-group flex-align">
+  <div class="form-group flex-align-justify-center">
     <%= d.button :submit, class: "btn-primary btn-center" %>
   </div>
 <% end %>
